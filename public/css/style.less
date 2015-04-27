@@ -1,0 +1,220 @@
+/*
+
+	STYLE LESS
+
+*/
+
+@import "ambiente.less";
+@import "cores.less";
+@import "fontes.less";	
+@import "funcoes.less";
+@import "icons.less";
+@import "padroes.less";
+
+
+* {
+	font-family: @fontePadrao;
+	font-weight: 300;
+	word-wrap: break-word;
+}
+body {
+	background: @cinzaFundo;
+}
+
+.div-total-topo,
+.div-total-meio,
+.div-total-rodape,
+.container {
+	float: left;
+	width: 100%;
+	min-width: 1030px;
+	display: inline-block;
+}
+
+.div-total-topo {
+	height: 55px;
+}
+	
+	.navbar {
+		padding: 0 15px;
+		width: 100%;
+		min-width: 1030px;
+		height: 45px;
+		border-bottom: 2px solid darken(@corPrincipal, 5%);
+		background: @corPrincipal;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 900;
+		overflow: hidden;
+	}
+	@media only screen and (min-width: 1001px) {
+		.navbar {
+			position: fixed;
+		}
+	}
+		.navbar-logo,
+		.footerbar-logo {
+			height: 45px;
+			position: absolute;
+			top: 5px;
+			left: 0;			
+		}
+			.navbar-logo > a,
+			.navbar-logo > a > span {
+				font-size: 30px;
+			}
+			.navbar-logo > a {
+				height: 100%;
+				display: block;
+				color: @branco;
+			}
+				.navbar-logo > a > span {
+					color: darken(@corPrincipal, 15%);
+				}
+		.navbar-options {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			height: 45px;
+		}
+			.navbar-options > ul > li {
+				display: inline;
+			}
+
+.div-total-meio {
+	padding: 15px 0;
+	text-align: left;
+}
+	
+	/* LOGIN */
+	.div-pagina-login {
+		position: relative;		
+	}
+		.div-form-login {
+			width: 300px;
+			float: left;
+		}
+		
+		.div-conteudo-pagina-login {
+			margin: 0 15px 0 0;
+			width: 685px;
+			float: left;
+		}
+			.div-form-cadastro,
+			.div-termos-de-uso {
+				width: 100%;
+				float: left;
+			}
+			.div-termos-de-uso {
+				margin: 0 0 10px 0;
+			}
+	
+	
+	/* INDEX */
+	.div-colum-perfil {
+		margin-right: 15px;
+		width: 185px;
+		float: left;		
+	}	
+		.div-colum-perfil > div {
+			margin: 0 0 15px 0;
+			width: 185px;
+			height: 150px;
+			float: left;
+			display: inline-block;
+			clear: both;
+		}
+			.div-colum-perfil > div > ul {
+				padding: 0 5px;
+				width: 100%;
+				margin: 0;
+				float: left;
+				list-style: none;
+			}
+				.div-colum-perfil > div > ul > li {
+					position: relative;
+					width: 100%;
+					display: inline-block;
+				}
+					.div-colum-perfil > div > ul > li > a {
+						padding: 3px 5px;
+						margin: 0 0 2px 0;
+						display: block;
+						text-align: left;
+						line-height: 1.5;
+						font-size: 13px;
+						.setBorderRadius(all, 2px);
+						&:hover {
+							background: darken(@corPrincipal, 15%);
+							color: @branco;
+						}
+					}
+					.div-colum-perfil > div > ul > li > a:hover > i {
+						color: @branco;
+					}
+					.div-colum-perfil > div > ul > li > a:hover > .notice {
+						color: @branco;
+						background: transparent;
+						.setBoxShadow(1px 1px 5px transparent);
+					}
+						.div-colum-perfil > div > ul > li > a > i {
+							width: 25px;
+							vertical-align: -1px;
+						}
+		
+	.div-colum-public {
+		margin-right: 15px;
+		width: 550px;
+		float: left;		
+	}
+		.div-box-public {
+			padding: 8px 10px;
+			width: 100%;
+			height: 150px;
+			float: left;
+		}		
+			.div-box-public textarea {
+				width: 100%;
+				height: 90px;				
+			}
+			
+		.div-box-ind-public {
+			width: 100%;
+			height: auto;
+		}
+			.div-box-ind-ind-public {
+				padding: 15px;
+				margin: 15px 0 0 0;
+				width: 100%;
+				height: 300px;
+			}
+			
+	
+	.div-colum-destaque {
+		width: 235px;
+		float: left;
+		height: 300px;
+	}
+
+.div-total-rodape {
+	margin: 10px 0 0 0;
+	height: 30px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+}
+@media only screen and (max-height: 500px) {
+	.div-total-rodape {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}	
+}
+	.footerbar-desc {
+		text-align: left;
+		display: inline-block;
+		float: left;
+		font-size: 13px;
+		width: 100%;
+	}
